@@ -205,12 +205,12 @@ function resolvePromise(promise, promiseResult, resolve, reject) {
         reject(error)
       }
     } else {
-      // 如果 then 不是函数，以 x 为参数执行 promise
-      resolve(x)
+      // 如果 then 不是函数，以 promiseResult 为参数执行 promise
+      resolve(promiseResult)
     }
   } else {
-    // 如果 x 不为对象或者函数，以 x 为参数执行 promise
-    resolve(x)
+    // 如果 promiseResult 不为对象或者函数，以 promiseResult 为参数执行 promise
+    resolve(promiseResult)
   }
 }
 
